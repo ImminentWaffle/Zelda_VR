@@ -17,7 +17,7 @@ public class TitleScreen : MonoBehaviour
 
         PauseManager.Instance.IsPauseAllowed_Inventory = false;
         PauseManager.Instance.IsPauseAllowed_Options = false;
-        CommonObjects.PlayerController_C.SetHaltUpdateMovement(true);
+        //TODO: robert CommonObjects.PlayerController_C.SetHaltUpdateMovement(true);
     }
 
     void UpdateVersionText()

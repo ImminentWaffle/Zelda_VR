@@ -110,10 +110,7 @@ public class ZeldaInput : Singleton<ZeldaInput>
 
     bool AreAnyTouchControllersActive_()
     {
-        OVRInput.Controller c = OVRInput.GetActiveController();
-        return c == OVRInput.Controller.Touch
-            || c == OVRInput.Controller.LTouch
-            || c == OVRInput.Controller.RTouch;
+        return false;
     }
 
 

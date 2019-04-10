@@ -9,18 +9,19 @@ public class FaceCamera : MonoBehaviour
 
     void Awake()
     {
-        _target = CommonObjects.PrimaryCamera.transform;
+        //robert _target = CommonObjects.PrimaryCamera.transform;
     }
 
     void LateUpdate()
     {
-        transform.LookAt(_target);
-
+        //robert transform.LookAt(_target);
+        /*robert
         if (yAxisOnly)
         {
             Vector3 fwd = transform.forward;
             fwd.y = 0;
             transform.forward = fwd;
         }
+        */
     }
 }

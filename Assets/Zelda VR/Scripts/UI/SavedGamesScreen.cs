@@ -130,7 +130,7 @@ public class SavedGamesScreen : MonoBehaviour
             return;
         }
 
-        CommonObjects.PlayerController_C.SetHaltUpdateMovement(false);
+        //TODO: robert CommonObjects.PlayerController_C.SetHaltUpdateMovement(false);
 
         Player p = CommonObjects.Player_C;
         p.RegisteredName = v.PlayerName;

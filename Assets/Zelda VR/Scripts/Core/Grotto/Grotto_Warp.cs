@@ -65,7 +65,7 @@ public class Grotto_Warp : GrottoExtension_Base
         Vector3 newEuler = pc.transform.eulerAngles + eulerDiff;
         player.ForceNewRotation(newEuler);
 
-        pc.Stop();
+        //TODO: robert pc.Stop();
 
         OnPlayerExit();
         destinationGrotto.OnPlayerEnter();

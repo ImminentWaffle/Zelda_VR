@@ -1,8 +1,23 @@
 fileFormatVersion: 2
 guid: 16728c7d8503e734a922af76a960ad89
+timeCreated: 1553648131
+licenseType: Free
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player_G: {instanceID: 0}
+  - player_C: {instanceID: 0}
+  - playerController_G: {instanceID: 0}
+  - playerController_C: {instanceID: 0}
+  - primaryCamera: {instanceID: 0}
+  - _projectilesContainer: {instanceID: 0}
+  - _enemiesContainer: {instanceID: 0}
+  - enemyDeathAnimation: {instanceID: 0}
+  - invisibleBlockStatuePrefab: {instanceID: 0}
+  - _headSpaceCanvas: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

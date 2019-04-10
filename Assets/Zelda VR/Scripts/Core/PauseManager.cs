@@ -101,7 +101,7 @@ public class PauseManager : Singleton<PauseManager>
         if (ZeldaInput.AreAnyTouchControllersActive())
         {
             // TODO: Integrate OVRInput (Oculus Touch Controllers) with ZeldaInput
-            return OVRInput.GetDown(OVRInput.RawButton.X);  
+            return false;// OVRInput.GetDown(OVRInput.RawButton.X);  
         }
         else
         {

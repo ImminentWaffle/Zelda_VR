@@ -13,7 +13,7 @@ public class ZeldaHaptics : Singleton<ZeldaHaptics>
         set
         {
             _rumbleStrength = Mathf.Clamp01(value);
-            _rumbleSimpleClip = null; // This essentially marks clip as "dirty" so it will be recreated lazily.
+            //TODO: robert  _rumbleSimpleClip = null; // This essentially marks clip as "dirty" so it will be recreated lazily.
         }
     }
 
@@ -21,8 +21,9 @@ public class ZeldaHaptics : Singleton<ZeldaHaptics>
     const int SAMPLES_COUNT = 64;
     byte[] _samples = new byte[SAMPLES_COUNT];
 
-    OVRHapticsClip _rumbleSimpleClip;
-    public OVRHapticsClip RumbleSimpleClip { get { return _rumbleSimpleClip ?? (_rumbleSimpleClip = CreateRumbleClip()); } }
+    //TODO: robert OVRHapticsClip _rumbleSimpleClip;
+    //TODO: robert public OVRHapticsClip RumbleSimpleClip { get { return _rumbleSimpleClip ?? (_rumbleSimpleClip = CreateRumbleClip()); } }
+    /*
     OVRHapticsClip CreateRumbleClip()
     {
         OVRHapticsClip clip = null;
@@ -43,7 +44,7 @@ public class ZeldaHaptics : Singleton<ZeldaHaptics>
 
         return clip;
     }
-    
+    */
 
     public void RumbleSimple_Both()
     {
@@ -52,11 +53,11 @@ public class ZeldaHaptics : Singleton<ZeldaHaptics>
     }
     public void RumbleSimple_Left()
     {
-        RumbleSimple(OVRHaptics.LeftChannel);
+        //TODO: robert RumbleSimple(OVRHaptics.LeftChannel);
     }
     public void RumbleSimple_Right()
     {
-        RumbleSimple(OVRHaptics.RightChannel);
+        //TODO: robert RumbleSimple(OVRHaptics.RightChannel);
     }
 
     public void Rumble_Both(AudioClip audioClip)
@@ -66,14 +67,14 @@ public class ZeldaHaptics : Singleton<ZeldaHaptics>
     }
     public void Rumble_Left(AudioClip audioClip)
     {
-        Rumble(OVRHaptics.LeftChannel, audioClip);
+        //TODO: robert Rumble(OVRHaptics.LeftChannel, audioClip);
     }
     public void Rumble_Right(AudioClip audioClip)
     {
-        Rumble(OVRHaptics.RightChannel, audioClip);
+        //TODO: robert Rumble(OVRHaptics.RightChannel, audioClip);
     }
 
-
+    /*
     void RumbleSimple(OVRHaptics.OVRHapticsChannel channel)
     {
         if (channel == null) { return; }
@@ -97,7 +98,7 @@ public class ZeldaHaptics : Singleton<ZeldaHaptics>
         {
             channel.Mix(clip);
         }*/
-    }
+    //}
 
 
     /*void Update()

@@ -53,7 +53,7 @@ public class SubDungeon : MonoBehaviour
         Vector3 newEuler = pc.transform.eulerAngles + eulerDiff;
         player.ForceNewRotation(newEuler);
 
-        pc.Stop();
+        //TODO: robert pc.Stop();
 
 
         ParentDungeonRoom.onPlayerExitedRoom();

@@ -297,7 +297,7 @@ public class Player : Actor
         set
         {
             _jumpHeight = value;
-            _playerController.JumpForce = _jumpHeight * 0.25f;
+            _playerController.m_JumpSpeed = _jumpHeight * 0.25f;
         }
     }
 
@@ -308,12 +308,12 @@ public class Player : Actor
         get { return _IsMoonModeEnabled; }
         set
         {
-            if (!_IsMoonModeEnabled) { _normalGravityModifier = _playerController.GravityModifier; }
+            if (!_IsMoonModeEnabled) { _normalGravityModifier = _playerController.m_GravityMultiplier; }
             _IsMoonModeEnabled = value;
 
             float gravMod = _normalGravityModifier;
             if (_IsMoonModeEnabled) { gravMod *= MOON_MODE_GRAVITY_MODIFIER; }
-            _playerController.GravityModifier = gravMod;
+            _playerController.m_GravityMultiplier = gravMod;
         }
     }
 
@@ -618,7 +618,7 @@ public class Player : Actor
 
     public void ReturnToGroundLevel()
     {
-        _playerController.Stop();
+        //_playerController.Stop();
         _playerController.transform.SetY(GroundedPlayerY);
     }
     

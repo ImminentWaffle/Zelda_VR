@@ -18,7 +18,7 @@ namespace Uniblocks
 
             if (Input.GetKeyDown("space") && Time.realtimeSinceStartup > 3.0f)
             {
-                GetComponent<CharacterMotor>().enabled = true;
+                //GetComponent<CharacterMotor>().enabled = true;
             }
 
             if (Input.GetKeyDown("v"))

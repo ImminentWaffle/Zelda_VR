@@ -36,12 +36,12 @@ public class VRDynamicSword : MonoBehaviour
         {
             return;
         }
-        if (!OVRInput.GetControllerPositionTracked(OVRInput.Controller.RTouch))
-        {
-            return;
-        }
+        //TODO: robert if (!OVRInput.GetControllerPositionTracked(OVRInput.Controller.RTouch))
+        //TODO: robert {
+        //TODO: robert return;
+        //TODO: robert }
 
-        _controllerPos = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
+        //TODO: robert  _controllerPos = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
 
         if (_prevControllerPos != Vector3.zero)
         {

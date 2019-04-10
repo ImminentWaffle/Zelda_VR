@@ -81,6 +81,7 @@ public class GrottoSpawnPoint : MonoBehaviour
         // TODO: Don't use GameObject.Find
 
         _grottosContainer = GameObject.Find("Grottos").transform;
+        GameObject go = GameObject.Find(ZeldaTags.OVERWORLD_INFO);
         _overworldInfo = GameObject.FindGameObjectWithTag(ZeldaTags.OVERWORLD_INFO).GetComponent<OverworldInfo>();
 
         marker.SetActive(false);

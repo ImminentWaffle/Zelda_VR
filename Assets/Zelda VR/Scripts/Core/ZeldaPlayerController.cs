@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
-public class ZeldaPlayerController : OVRPlayerController
+public class ZeldaPlayerController : FirstPersonController//TODO: robert : OVRPlayerController
 {
     const float FLY_SPEED = 0.2f;
 
@@ -56,13 +57,14 @@ public class ZeldaPlayerController : OVRPlayerController
     {
         get
         {
-            return CameraRig.centerEyeAnchor.forward;
+            return transform.forward;// CameraRig.centerEyeAnchor.forward;
         }
     }
     public Vector3 LastAttemptedMotion { get; private set; }
 
-    public float Height { get { return Controller.height; } }
+    public float Height { get { return m_CharacterController.height; } }
 
+    /*
     protected override void UpdateController()
     {
         Transform crt = CameraRig.transform;
@@ -157,8 +159,10 @@ public class ZeldaPlayerController : OVRPlayerController
         if (predictedXZ != actualXZ)
             MoveThrottle += (actualXZ - predictedXZ) / (SimulationRate * Time.deltaTime);
     }
-    public bool IsGrounded { get { return Controller.isGrounded; } }
+    */
+    public bool IsGrounded { get { return m_CharacterController.isGrounded; } }
 
+    /*
     public override void UpdateMovement()
     {
         if (HaltUpdateMovement)
@@ -228,7 +232,8 @@ public class ZeldaPlayerController : OVRPlayerController
 
         transform.rotation = Quaternion.Euler(euler);
     }
-
+    */
+    /*
     new public bool Jump()
     {
         if (airJumpingEnabled)
@@ -244,4 +249,5 @@ public class ZeldaPlayerController : OVRPlayerController
 
         return true;
     }
+    */
 }

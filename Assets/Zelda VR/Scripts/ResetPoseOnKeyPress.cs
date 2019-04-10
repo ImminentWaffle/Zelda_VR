@@ -9,7 +9,7 @@ public class ResetPoseOnKeyPress : MonoBehaviour
 	{
 		if(Input.GetKeyUp(key))
         {
-            OVRManager.display.RecenterPose();
+            //TODO: robert OVRManager.display.RecenterPose();
         }
-	}
+    }
 }
