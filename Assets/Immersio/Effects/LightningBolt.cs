@@ -19,8 +19,8 @@ public class LightningBolt : MonoBehaviour
         {
             zigs = value;
             _oneOverZigs = 1f / (float)zigs;
-            GetComponent<ParticleEmitter>().Emit(zigs);
-            _particles = GetComponent<ParticleEmitter>().particles;
+            //TODO: robert GetComponent<ParticleSystem.Particle>().Emit(zigs);
+            //TODO: robert _particles = GetComponent<ParticleSystem.Particle>().particles;
         }
     }
     float _oneOverZigs;
@@ -39,16 +39,16 @@ public class LightningBolt : MonoBehaviour
 
     Perlin _noise;
 
-    Particle[] _particles;
+    ParticleSystem.Particle[] _particles;
 
 
     void Start()
     {
         _oneOverZigs = 1f / (float)zigs;
-        GetComponent<ParticleEmitter>().emit = false;
+        //TODO: robert GetComponent<ParticleEmitter>().emit = false;
 
-        GetComponent<ParticleEmitter>().Emit(zigs);
-        _particles = GetComponent<ParticleEmitter>().particles;
+        //TODO: robert GetComponent<ParticleEmitter>().Emit(zigs);
+        //TODO: robert _particles = GetComponent<ParticleEmitter>().particles;
 
         IsActive = true;
         Activate(false);
@@ -60,8 +60,8 @@ public class LightningBolt : MonoBehaviour
         if (doActivate == IsActive)
             return;
 
-        if (!doActivate)
-            GetComponent<ParticleEmitter>().ClearParticles();
+        //TODO: robert if (!doActivate)
+        //TODO: robert GetComponent<ParticleEmitter>().ClearParticles();
 
         if (startLight)
             startLight.enabled = doActivate;
@@ -96,11 +96,13 @@ public class LightningBolt : MonoBehaviour
 
             _particles[i].position = position;
             _particles[i].color = color;
-            _particles[i].energy = 1f;
+            //TODO: robert _particles[i].energy = 1f;
         }
 
-        GetComponent<ParticleEmitter>().particles = _particles;
+        //TODO: robert GetComponent<ParticleEmitter>().particles = _particles;
 
+        //TODO: robert 
+        /*
         if (GetComponent<ParticleEmitter>().particleCount >= 2)
         {
             if (startLight)
@@ -108,5 +110,6 @@ public class LightningBolt : MonoBehaviour
             if (endLight)
                 endLight.transform.position = _particles[_particles.Length - 1].position;
         }
+        */
     }
 }

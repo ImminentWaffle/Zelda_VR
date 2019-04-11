@@ -68,11 +68,12 @@ namespace Uniblocks
                 idx.z * sizeZ * s.z);
 
             // Grab voxel data
-            if (Engine.EnableMultiplayer && !Network.isServer)
-            {
-                StartCoroutine(RequestVoxelData()); // if multiplayer, get data from server
-            }
-            else if (Engine.SaveVoxelData && TryLoadVoxelData())
+            //TODO: robert if (Engine.EnableMultiplayer && !Network.isServer)
+            //TODO: robert {
+            //TODO: robert StartCoroutine(RequestVoxelData()); // if multiplayer, get data from server
+            //TODO: robert }
+            //TODO: robert else 
+            if (Engine.SaveVoxelData && TryLoadVoxelData())
             {
                 // data is loaded through TryLoadVoxelData()
             }
@@ -565,20 +566,20 @@ namespace Uniblocks
         public static int CurrentChunkDataRequests; 
 
         IEnumerator RequestVoxelData()
-        { 
+        {
             // waits until we're connected to a server and then sends a request for voxel data for this chunk to the server
-            while (!Network.isClient)
-            {
-                CurrentChunkDataRequests = 0;   // reset the counter if we're not connected
-                yield return new WaitForEndOfFrame();
-            }
+            //TODO: robert while (!Network.isClient)
+            //TODO: robert {
+            //TODO: robert CurrentChunkDataRequests = 0;   // reset the counter if we're not connected
+            //TODO: robert yield return new WaitForEndOfFrame();
+            //TODO: robert }
             while (Engine.MaxChunkDataRequests != 0 && CurrentChunkDataRequests >= Engine.MaxChunkDataRequests)
             {
                 yield return new WaitForEndOfFrame();
             }
 
             CurrentChunkDataRequests++;
-            Engine.UniblocksNetwork.GetComponent<NetworkView>().RPC("SendVoxelData", RPCMode.Server, Network.player, chunkIndex.x, chunkIndex.y, chunkIndex.z);
+            //TODO: robert Engine.UniblocksNetwork.GetComponent<NetworkView>().RPC("SendVoxelData", RPCMode.Server, Network.player, chunkIndex.x, chunkIndex.y, chunkIndex.z);
         }
     }
 }

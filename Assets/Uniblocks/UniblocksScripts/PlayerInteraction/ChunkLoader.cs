@@ -26,10 +26,10 @@ namespace Uniblocks
             // don't load chunks if multiplayer is enabled but the connection isn't established yet
             if (Engine.EnableMultiplayer)
             {
-                if (!Network.isClient && !Network.isServer)
-                {
-                    return;
-                }
+                //TODO: robert if (!Network.isClient && !Network.isServer)
+                //TODO: robert {
+                //TODO: robert return;
+                //TODO: robert }
             }
 
 

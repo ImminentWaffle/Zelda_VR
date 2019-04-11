@@ -17,8 +17,8 @@ public class LightningRing : MonoBehaviour
         {
             zigs = value;
             _oneOverZigs = 1f / (float)zigs;
-            GetComponent<ParticleEmitter>().Emit(zigs);
-            _particles = GetComponent<ParticleEmitter>().particles;
+            //TODO: robert GetComponent<ParticleEmitter>().Emit(zigs);
+            //TODO: robert _particles = GetComponent<ParticleEmitter>().particles;
         }
     }
     float _oneOverZigs;
@@ -32,16 +32,16 @@ public class LightningRing : MonoBehaviour
 
     Perlin _noise;
 
-    Particle[] _particles;
+    ParticleSystem.Particle[] _particles;
 
 
     void Start()
     {
         _oneOverZigs = 1f / (float)zigs;
-        GetComponent<ParticleEmitter>().emit = false;
+        //TODO: robert GetComponent<ParticleEmitter>().emit = false;
 
-        GetComponent<ParticleEmitter>().Emit(zigs);
-        _particles = GetComponent<ParticleEmitter>().particles;
+        //TODO: robert GetComponent<ParticleEmitter>().Emit(zigs);
+        //TODO: robert _particles = GetComponent<ParticleEmitter>().particles;
 
         IsActive = true;
         Activate(false);
@@ -52,8 +52,8 @@ public class LightningRing : MonoBehaviour
     {
         if (doActivate == IsActive)
             return;
-        if (!doActivate)
-            GetComponent<ParticleEmitter>().ClearParticles();
+        //TODO: robert if (!doActivate)
+        //TODO: robert GetComponent<ParticleEmitter>().ClearParticles();
         IsActive = doActivate;
     }
 
@@ -90,9 +90,9 @@ public class LightningRing : MonoBehaviour
 
             _particles[i].position = position;
             _particles[i].color = color;
-            _particles[i].energy = 1f;
+            //TODO: robert _particles[i].energy = 1f;
         }
 
-        GetComponent<ParticleEmitter>().particles = _particles;
+        //TODO: robert GetComponent<ParticleEmitter>().particles = _particles;
     }
 }

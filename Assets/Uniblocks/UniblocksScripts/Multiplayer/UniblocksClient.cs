@@ -23,19 +23,19 @@ namespace Uniblocks
 
         public static void UpdatePlayerPosition(int x, int y, int z)
         {
-            Engine.UniblocksNetwork.GetComponent<NetworkView>().RPC("UpdatePlayerPosition", RPCMode.Server, Network.player, x, y, z);
+            //TODO: robert Engine.UniblocksNetwork.GetComponent<NetworkView>().RPC("UpdatePlayerPosition", RPCMode.Server, Network.player, x, y, z);
         }
         public static void UpdatePlayerPosition(Index index)
         {
-            Engine.UniblocksNetwork.GetComponent<NetworkView>().RPC("UpdatePlayerPosition", RPCMode.Server, Network.player, index.x, index.y, index.z);
+            //TODO: robert Engine.UniblocksNetwork.GetComponent<NetworkView>().RPC("UpdatePlayerPosition", RPCMode.Server, Network.player, index.x, index.y, index.z);
         }
         public static void UpdatePlayerRange(int range)
         {
-            Engine.UniblocksNetwork.GetComponent<NetworkView>().RPC("UpdatePlayerRange", RPCMode.Server, Network.player, range);
+            //TODO: robert Engine.UniblocksNetwork.GetComponent<NetworkView>().RPC("UpdatePlayerRange", RPCMode.Server, Network.player, range);
         }
 
 
-        [RPC]
+        //TODO: robert [RPC]
         public void ReceiveVoxelData(int chunkx, int chunky, int chunkz, byte[] data)
         {
             GameObject chunkObject = ChunkManager.GetChunk(chunkx, chunky, chunkz); // find the chunk
@@ -57,13 +57,13 @@ namespace Uniblocks
             int chunkz = info.chunk.chunkIndex.z;
 
             // send to server
-            if (Network.isServer)
-            {
-                GetComponent<UniblocksServer>().ServerPlaceBlock(Network.player, info.index.x, info.index.y, info.index.z, chunkx, chunky, chunkz, (int)data);
-            }
-            else {
-                GetComponent<NetworkView>().RPC("ServerPlaceBlock", RPCMode.Server, Network.player, info.index.x, info.index.y, info.index.z, chunkx, chunky, chunkz, (int)data);
-            }
+            //TODO: robert if (Network.isServer)
+            //TODO: robert {
+            //TODO: robert GetComponent<UniblocksServer>().ServerPlaceBlock(Network.player, info.index.x, info.index.y, info.index.z, chunkx, chunky, chunkz, (int)data);
+            //TODO: robert }
+            //TODO: robert else {
+            //TODO: robert GetComponent<NetworkView>().RPC("ServerPlaceBlock", RPCMode.Server, Network.player, info.index.x, info.index.y, info.index.z, chunkx, chunky, chunkz, (int)data);
+            //TODO: robert }
         }
 
         public void SendChangeBlock(VoxelInfo info, ushort data)
@@ -74,16 +74,17 @@ namespace Uniblocks
             int chunkz = info.chunk.chunkIndex.z;
 
             // send to server
-            if (Network.isServer)
-            {
-                GetComponent<UniblocksServer>().ServerChangeBlock(Network.player, info.index.x, info.index.y, info.index.z, chunkx, chunky, chunkz, (int)data);
-            }
-            else {
-                GetComponent<NetworkView>().RPC("ServerChangeBlock", RPCMode.Server, Network.player, info.index.x, info.index.y, info.index.z, chunkx, chunky, chunkz, (int)data);
-            }
+            //TODO: robert if (Network.isServer)
+            //TODO: robert {
+            //TODO: robert GetComponent<UniblocksServer>().ServerChangeBlock(Network.player, info.index.x, info.index.y, info.index.z, chunkx, chunky, chunkz, (int)data);
+            //TODO: robert }
+            //TODO: robert else {
+            //TODO: robert GetComponent<NetworkView>().RPC("ServerChangeBlock", RPCMode.Server, Network.player, info.index.x, info.index.y, info.index.z, chunkx, chunky, chunkz, (int)data);
+            //TODO: robert }
         }
 
-        [RPC]
+        //TODO: robert [RPC]
+        /*
         public void ReceivePlaceBlock(NetworkPlayer sender, int x, int y, int z, int chunkx, int chunky, int chunkz, int data)
         {   // receives a change sent by other client or server
             GameObject chunkObject = ChunkManager.GetChunk(chunkx, chunky, chunkz);
@@ -103,8 +104,9 @@ namespace Uniblocks
                 }
             }
         }
-
-        [RPC]
+        */
+        //TODO: robert [RPC]
+        /*
         public void ReceiveChangeBlock(NetworkPlayer sender, int x, int y, int z, int chunkx, int chunky, int chunkz, int data)
         {   // receives a change sent by other client or server
             GameObject chunkObject = ChunkManager.GetChunk(chunkx, chunky, chunkz);
@@ -118,7 +120,7 @@ namespace Uniblocks
                 Voxel.ChangeBlockMultiplayer(info, (ushort)data, sender);
             }
         }
-
+        */
         // convert back to string
         static string GetString(byte[] bytes)
         {
@@ -127,4 +129,5 @@ namespace Uniblocks
             return new string(chars);
         }
     }
+    
 }

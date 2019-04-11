@@ -109,7 +109,7 @@ namespace ScionEngine
 		[Inspector.Slider("White Point", useProperty = "whitePoint", visibleCheck = "ShowTonemapping", minValue = 0.5f, maxValue = 20.0f, tooltip = "At what intensity pixels will become white")]
 		[SerializeField] protected float m_whitePoint = 7.0f;
 		
-		protected bool ShowCameraMode() { return camera.hdr == true; }
+		protected bool ShowCameraMode() { return camera.allowHDR == true; }
 		//protected bool ShowCameraMode() { return true; }
 		protected bool ShowExposureComp() { return ShowCameraMode() == true && cameraMode != CameraMode.Off; }
 		protected bool ShowExposureAdaption() { return ShowCameraMode() == true && cameraMode != CameraMode.Off && cameraMode != CameraMode.Manual; }
@@ -844,7 +844,7 @@ namespace ScionEngine
 
 		private void Start()
 		{
-			prevRenderWasHDR = camera.hdr;
+			prevRenderWasHDR = camera.allowHDR;
 		}
 
 		private bool prevRenderWasHDR = false;
@@ -853,17 +853,17 @@ namespace ScionEngine
 			//TODO: Remove when inspector attributes are updated
 			postProcessParams.DoFParams.depthOfFieldMask = exclusionMask;
 
-			if (camera.hdr == false) 
+			if (camera.allowHDR == false) 
 			{
 				postProcessParams.cameraParams.cameraMode = CameraMode.Off;
 				postProcessParams.exposure = false; 
 			}
 			else 
 			{
-				if (prevRenderWasHDR != camera.hdr) 
+				if (prevRenderWasHDR != camera.allowHDR) 
 				{
 					m_isFirstRender = true;
-					prevRenderWasHDR = camera.hdr;
+					prevRenderWasHDR = camera.allowHDR;
 				}
 				postProcessParams.cameraParams.cameraMode = m_cameraMode;
 				postProcessParams.exposure = (m_cameraMode != CameraMode.Off); 

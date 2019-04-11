@@ -12,11 +12,11 @@ namespace Uniblocks
         public float AutosaveTime; // how often to autosave voxel data; 0 is never
         private float autosaveTimer;
 
-        private Dictionary<NetworkPlayer, Index> PlayerPositions; // stores the index of each player's origin chunk. Changes will only be sent if the change is within their radius
-        private Dictionary<NetworkPlayer, int> PlayerChunkSpawnDistances; // chunk spawn distance for each player
+        //TODO: robert private Dictionary<NetworkPlayer, Index> PlayerPositions; // stores the index of each player's origin chunk. Changes will only be sent if the change is within their radius
+        //TODO: robert private Dictionary<NetworkPlayer, int> PlayerChunkSpawnDistances; // chunk spawn distance for each player
 
 
-
+/*
         void Awake()
         {
             if (Engine.EnableMultiplayer == false) Debug.LogWarning("Uniblocks: Multiplayer is disabled. Unexpected behavior may occur.");
@@ -163,7 +163,7 @@ namespace Uniblocks
             PlayerChunkSpawnDistances[player] = range;
             if (EnableDebugLog) Debug.Log("UniblocksServer: Updated player range. Player: " + player.ToString() + ", range: " + range.ToString());
         }
-
+        */
         // ===== save data
 
         void Update()

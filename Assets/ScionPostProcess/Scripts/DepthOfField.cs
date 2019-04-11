@@ -343,7 +343,7 @@ namespace ScionEngine
 			maskCamera.clearFlags = CameraClearFlags.SolidColor;
 			maskCamera.backgroundColor = Color.white;
 			maskCamera.renderingPath = RenderingPath.Forward;
-			maskCamera.hdr = false;
+			maskCamera.allowHDR = false;
 			maskCamera.RenderWithShader(maskShader, "RenderType");
 
 			return exclusionMask;

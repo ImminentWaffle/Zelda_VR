@@ -277,12 +277,12 @@ class ZeldaEditorMenu
         }
 
         // Build player
-        string error = BuildPipeline.BuildPlayer(scenes, buildPath, BuildTarget.StandaloneWindows, BuildOptions.None);
-        if (!string.IsNullOrEmpty(error))
-        {
-            Debug.LogError(error);
-            return;
-        }
+        //TODO: robert string error = BuildPipeline.BuildPlayer(scenes, buildPath, BuildTarget.StandaloneWindows, BuildOptions.None);
+        //TODO: robert if (!string.IsNullOrEmpty(error))
+        //TODO: robert {
+        //TODO: robert Debug.LogError(error);
+        //TODO: robert return;
+        //TODO: robert }
 
         string appName = Path.GetFileNameWithoutExtension(buildPath);
         string buildDirectory = Path.GetDirectoryName(buildPath);

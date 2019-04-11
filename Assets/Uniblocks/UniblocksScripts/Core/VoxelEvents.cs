@@ -25,23 +25,23 @@ namespace Uniblocks
         public virtual void OnBlockPlace(VoxelInfo voxelInfo)
         {
         }
-        public virtual void OnBlockPlaceMultiplayer(VoxelInfo voxelInfo, NetworkPlayer sender)
-        {
-        }
+        //TODO: robert public virtual void OnBlockPlaceMultiplayer(VoxelInfo voxelInfo, NetworkPlayer sender)
+        //TODO: robert {
+        //TODO: robert }
 
         public virtual void OnBlockDestroy(VoxelInfo voxelInfo)
         {
         }
-        public virtual void OnBlockDestroyMultiplayer(VoxelInfo voxelInfo, NetworkPlayer sender)
-        {
-        }
+        //TODO: robert public virtual void OnBlockDestroyMultiplayer(VoxelInfo voxelInfo, NetworkPlayer sender)
+        //TODO: robert {
+        //TODO: robert }
 
         public virtual void OnBlockChange(VoxelInfo voxelInfo)
         {
         }
-        public virtual void OnBlockChangeMultiplayer(VoxelInfo voxelInfo, NetworkPlayer sender)
-        {
-        }
+        //TODO: robert public virtual void OnBlockChangeMultiplayer(VoxelInfo voxelInfo, NetworkPlayer sender)
+        //TODO: robert {
+        //TODO: robert }
 
         public virtual void OnBlockEnter(GameObject enteringObject, VoxelInfo voxelInfo)
         {

@@ -93,7 +93,8 @@ namespace Uniblocks
             }
         }
 
-
+        //TODO: robert 
+        /*
         #region Multiplayer
 
         public static void DestroyBlockMultiplayer(VoxelInfo voxelInfo, NetworkPlayer sender)
@@ -152,7 +153,7 @@ namespace Uniblocks
         }
 
         #endregion Multiplayer
-
+        */
 
         static void RegisterWithChunk(VoxelInfo voxelInfo, ushort data)
         {

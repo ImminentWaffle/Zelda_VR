@@ -86,13 +86,13 @@ public class ZeldaInput : Singleton<ZeldaInput>
         //_inputMode = InputModeEnum.OculusTouch;
         //_zeldaInputMapping = gameObject.AddComponent<ZeldaInputMapping_OculusTouch>();
 
-        //_inputMode = InputModeEnum.MouseAndKeyboard;
-        //_zeldaInputMapping = gameObject.AddComponent<ZeldaInputMapping_MouseKeyboard>();
+        _inputMode = InputModeEnum.MouseAndKeyboard;
+        _zeldaInputMapping = gameObject.AddComponent<ZeldaInputMapping_MouseKeyboard>();
 
-        _inputMode = InputModeEnum.XBOX_Gamepad;
-        _zeldaInputMapping = gameObject.AddComponent<ZeldaInputMapping_Xbox>();
+        //_inputMode = InputModeEnum.XBOX_Gamepad;
+        //_zeldaInputMapping = gameObject.AddComponent<ZeldaInputMapping_Xbox>();
     }
-
+    
 
     bool GetCommand_Bool_(Cmd_Bool cmd)
     {

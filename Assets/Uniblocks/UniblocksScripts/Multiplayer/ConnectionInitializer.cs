@@ -27,17 +27,17 @@ namespace Uniblocks
 
         public void StartServer()
         {
-            Network.InitializeServer(MaxConnections, Port, UseNat);
+            //TODO: robert Network.InitializeServer(MaxConnections, Port, UseNat);
         }
 
         void OnServerInitialized()
         {
-            Network.Instantiate(UniblocksNetworkPrefab, transform.position, transform.rotation, 0); // instantiate UniblocksNetwork
+            //TODO: robert Network.Instantiate(UniblocksNetworkPrefab, transform.position, transform.rotation, 0); // instantiate UniblocksNetwork
         }
 
         public void ConnectToServer()
         {
-            Network.Connect(ServerIP, Port, ServerPassword);
+            //TODO: robert Network.Connect(ServerIP, Port, ServerPassword);
         }
     }
 }
