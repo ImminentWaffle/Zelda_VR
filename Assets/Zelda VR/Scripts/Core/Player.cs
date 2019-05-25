@@ -297,7 +297,8 @@ public class Player : Actor
         set
         {
             _jumpHeight = value;
-            _playerController.m_JumpSpeed = _jumpHeight * 0.25f;
+            //            _playerController.m_JumpSpeed = _jumpHeight * 0.25f;
+            //_playerController.m_JumpSpeed = _jumpHeight * 0.25f;
         }
     }
 
@@ -305,15 +306,15 @@ public class Player : Actor
     float _normalGravityModifier;
     public bool IsMoonModeEnabled
     {
-        get { return _IsMoonModeEnabled; }
+        get { return false;/* _IsMoonModeEnabled;*/ }
         set
         {
-            if (!_IsMoonModeEnabled) { _normalGravityModifier = _playerController.m_GravityMultiplier; }
-            _IsMoonModeEnabled = value;
+//            if (!_IsMoonModeEnabled) { _normalGravityModifier = _playerController.m_GravityMultiplier; }
+//            _IsMoonModeEnabled = value;
 
-            float gravMod = _normalGravityModifier;
-            if (_IsMoonModeEnabled) { gravMod *= MOON_MODE_GRAVITY_MODIFIER; }
-            _playerController.m_GravityMultiplier = gravMod;
+//            float gravMod = _normalGravityModifier;
+//            if (_IsMoonModeEnabled) { gravMod *= MOON_MODE_GRAVITY_MODIFIER; }
+//            _playerController.m_GravityMultiplier = gravMod;
         }
     }
 

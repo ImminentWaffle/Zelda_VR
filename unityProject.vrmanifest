@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.zeldavr.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "G:\\Users\\Robert\\Documents\\Zelda_VR\\github\\zelda_vr\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Zelda VR [Testing]"
+        }
+      }
+    }
+  ]
+}

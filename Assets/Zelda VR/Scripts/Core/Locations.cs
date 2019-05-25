@@ -213,15 +213,15 @@ public class Locations : Singleton<Locations>
     {
         _warpCompleteCallback = onCompleteCallback;
         _warpToLocation = location;
-
-        if (useShutters)
-        {
-            PlayShutterSequence(DoWarpPlayerToLocation, closeShuttersInstantly);
-        }
-        else
-        {
+        //TODO: robert 
+        //if (useShutters)
+        //{
+        //    PlayShutterSequence(DoWarpPlayerToLocation, closeShuttersInstantly);
+        //}
+        //else
+        //{
             DoWarpPlayerToLocation();
-        }
+        //}
     }
     void DoWarpPlayerToLocation()
     {
@@ -257,14 +257,15 @@ public class Locations : Singleton<Locations>
     {
         _sceneToLoad = scene;
 
-        if (useShutters)
-        {
-            PlayShutterSequence(DoLoadScene, closeShuttersInstantly);
-        }
-        else
-        {
+        //TODO: robert
+        //if (useShutters)
+        //{
+        //    PlayShutterSequence(DoLoadScene, closeShuttersInstantly);
+        //}
+        //else
+        //{
             DoLoadScene();
-        }
+        //}
     }
     void DoLoadScene()
     {
@@ -280,7 +281,7 @@ public class Locations : Singleton<Locations>
         LimitControls();
 
         OverlayShuttersViewController svc = OverlayShuttersViewController.Instance;
-        svc._isReadyToOpen_Predicate = IsReadyToOpen;
+        //TODO: robert svc._isReadyToOpen_Predicate = IsReadyToOpen;
         svc.PlayCloseAndOpenSequence(onCloseCompleteCallback, RestoreControls, INTERMISSION_DURATION, closeInstantly);
     }
 

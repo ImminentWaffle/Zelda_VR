@@ -97,7 +97,7 @@ public class PlayerHealthDelegate : MonoBehaviour
 
         yield return new WaitForSeconds(DEATH_SEQUENCE_DURATION);
 
-        OverlayShuttersViewController.Instance.PlayCloseAndOpenSequence(RespawnPlayer, ShuttersFinishedOpening, 0.1f);
+        //TODO: robert OverlayShuttersViewController.Instance.PlayCloseAndOpenSequence(RespawnPlayer, ShuttersFinishedOpening, 0.1f);
     }
 
 

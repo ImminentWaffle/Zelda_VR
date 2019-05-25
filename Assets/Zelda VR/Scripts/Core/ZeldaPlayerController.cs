@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class ZeldaPlayerController : FirstPersonController//TODO: robert : OVRPlayerController
+public class ZeldaPlayerController : Valve.VR.InteractionSystem.Player//TODO: robert : OVRPlayerController
 {
     const float FLY_SPEED = 0.2f;
 
@@ -62,7 +62,7 @@ public class ZeldaPlayerController : FirstPersonController//TODO: robert : OVRPl
     }
     public Vector3 LastAttemptedMotion { get; private set; }
 
-    public float Height { get { return m_CharacterController.height; } }
+    public float Height { get { return eyeHeight; } }
 
     /*
     protected override void UpdateController()
@@ -160,7 +160,7 @@ public class ZeldaPlayerController : FirstPersonController//TODO: robert : OVRPl
             MoveThrottle += (actualXZ - predictedXZ) / (SimulationRate * Time.deltaTime);
     }
     */
-    public bool IsGrounded { get { return m_CharacterController.isGrounded; } }
+    public bool IsGrounded { get { return true; } }
 
     /*
     public override void UpdateMovement()
